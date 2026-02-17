@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retencion </title>
+</head>
+<body>
+    <caption>Escala de Retencion de asalariados en 2025</caption>
+    <div>
+        <table border="1.5">
+            <tr>
+                <th>Escala anual</th><th>Tasa</th>
+            </tr>
+            <tr>
+                <td>Rentas hasta RD$416,220.00</td><td>Exento</td>
+            </tr>
+            <tr>
+                <td>Rentas desde RD$416,220.01 hasta RD$624,329.00</td><td>15% del excedente de RD$416,220.01</td>
+            </tr>    
+            <tr>
+                <td>Rentas desde RD$624,329.01 hasta RD$ 867,123.00</td><td>RD$31,216.00 más el 20% del excedente de RD$624,329.01</td>
+            </tr>
+            <tr>
+                <td>Rentas desde RD$867,123.01 en adelante</td><td>RD$79,776.00 más el 25% del excedente de RD$867,123.01</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        alert("Hola ahora calcularemos tu retencion salarial");
+        let nombre = prompt("Digite su nombre");
+        let salario, excedente, sueldo_anual, escala_anual, tasa, total_pagar_anual, total_pagar_mensual;
+        sueldo_anual = salario * 12;
+        salario = prompt("Digite su salario:");
+
+        if (salario < 416,220.00){
+            alert("estas excento de pagar el impuesto sobre la renta");
+
+        }else if (salario > 416,220.01 && salario < 624,329.00){
+            excedente = salario - 416,220.01;
+            total_pagar_anual = excedente + ((sueldo_anual - 416,220.00) * 0.15);
+            total_pagar_mensual = ((sueldo_anual - 416,220.00) * 0.15)/12;
+
+        }else if (salario > 624,329.01 && salario < 867,123.00){
+
+            const monto_escala = 31216.00; 
+            excedente = salario - 624,329.01;
+            total_pagar_anual = excedente + ((sueldo_anual - 624,329.01) * 0.20);
+            total_pagar_mensual = ((sueldo_anual - 624,329.01) * 0.20)/12;
+
+        }else{
+            const monto_escala = 79776.00;
+            excedente = salario - 867,123.01;
+            total_pagar_anual = excedente + ((sueldo_anual - 867,123.01) * 0.25);
+            total_pagar_mensual = ((sueldo_anual - 867,123.01) * 0.25)/12;
+
+        }
+
+    </script>
+
+</body>
+</html>
